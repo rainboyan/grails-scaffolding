@@ -9,6 +9,5 @@ dependencies {
     testImplementation "org.hibernate:hibernate-core-jakarta:$hibernateCoreVersion"
     testImplementation "org.grails:grails-datastore-gorm-hibernate5:$gormVersion"
     testImplementation "org.spockframework:spock-core:$spockVersion"
-    testImplementation 'net.bytebuddy:byte-buddy:1.14.4'
     testImplementation 'org.objenesis:objenesis:3.3'
 }

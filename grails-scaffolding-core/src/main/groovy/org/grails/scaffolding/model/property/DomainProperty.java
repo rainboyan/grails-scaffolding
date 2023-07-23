@@ -13,7 +13,7 @@ import org.grails.datastore.mapping.model.PersistentProperty;
  *
  * @author James Kleeh
  */
-public interface DomainProperty extends PersistentProperty {
+public interface DomainProperty extends PersistentProperty, Comparable<DomainProperty> {
 
     /**
      * @return The path of the property from the root domain class

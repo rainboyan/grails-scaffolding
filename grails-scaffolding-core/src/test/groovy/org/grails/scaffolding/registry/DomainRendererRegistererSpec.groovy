@@ -20,7 +20,7 @@ class DomainRendererRegistererSpec extends Specification {
     void setup() {
         domainInputRendererRegistry = new DomainInputRendererRegistry()
         DomainOutputRendererRegistry domainOutputRendererRegistry = new DomainOutputRendererRegistry()
-        new DomainRendererRegisterer(domainInputRendererRegistry: domainInputRendererRegistry, domainOutputRendererRegistry: domainOutputRendererRegistry).registerRenderers()
+        new DomainRendererRegisterer(domainInputRendererRegistry, domainOutputRendererRegistry).registerRenderers()
     }
 
 

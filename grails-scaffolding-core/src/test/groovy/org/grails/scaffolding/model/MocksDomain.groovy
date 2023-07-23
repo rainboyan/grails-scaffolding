@@ -39,7 +39,6 @@ trait MocksDomain {
         DomainPropertyFactory domainPropertyFactory = new DomainPropertyFactoryImpl(mappingContext)
         domainPropertyFactory.trimStrings = true
         domainPropertyFactory.convertEmptyStringsToNull = true
-        domainPropertyFactory.grailsDomainClassMappingContext = mappingContext
         domainPropertyFactory
     }
 }

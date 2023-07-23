@@ -21,7 +21,7 @@ import org.grails.scaffolding.model.property.DomainPropertyFactory
 @CompileStatic
 class DomainModelServiceImpl implements DomainModelService {
 
-    private DomainPropertyFactory domainPropertyFactory
+    DomainPropertyFactory domainPropertyFactory
 
     private static Method derivedMethod
 
@@ -32,6 +32,9 @@ class DomainModelServiceImpl implements DomainModelService {
         catch (NoSuchMethodException | SecurityException e) {
             // no-op
         }
+    }
+
+    DomainModelServiceImpl() {
     }
 
     DomainModelServiceImpl(DomainPropertyFactory domainPropertyFactory) {

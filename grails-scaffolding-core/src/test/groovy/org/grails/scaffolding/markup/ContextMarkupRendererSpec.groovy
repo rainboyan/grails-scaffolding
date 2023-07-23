@@ -1,12 +1,13 @@
 package org.grails.scaffolding.markup
 
+import org.springframework.context.MessageSource
+
 import org.grails.scaffolding.ClosureCapture
 import org.grails.scaffolding.ClosureCaptureSpecification
 import org.grails.scaffolding.model.property.DomainProperty
 import org.grails.datastore.mapping.model.PersistentEntity
 import spock.lang.Shared
 import spock.lang.Subject
-import spock.lang.Specification
 
 @Subject(ContextMarkupRendererImpl)
 class ContextMarkupRendererSpec extends ClosureCaptureSpecification {
@@ -15,7 +16,8 @@ class ContextMarkupRendererSpec extends ClosureCaptureSpecification {
     ContextMarkupRendererImpl renderer
 
     void setup() {
-        renderer = new ContextMarkupRendererImpl()
+        def messageSource = Mock(MessageSource)
+        renderer = new ContextMarkupRendererImpl(messageSource)
     }
 
     void "test listOutputContext"() {
