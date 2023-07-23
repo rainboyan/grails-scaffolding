@@ -13,9 +13,12 @@ import org.grails.scaffolding.registry.DomainOutputRendererRegistry
 @CompileStatic
 class PropertyMarkupRendererImpl implements PropertyMarkupRenderer {
 
-    private DomainInputRendererRegistry domainInputRendererRegistry
+    DomainInputRendererRegistry domainInputRendererRegistry
 
-    private DomainOutputRendererRegistry domainOutputRendererRegistry
+    DomainOutputRendererRegistry domainOutputRendererRegistry
+
+    PropertyMarkupRendererImpl() {
+    }
 
     PropertyMarkupRendererImpl(DomainInputRendererRegistry domainInputRendererRegistry, DomainOutputRendererRegistry domainOutputRendererRegistry) {
         this.domainInputRendererRegistry = domainInputRendererRegistry
@@ -36,4 +39,5 @@ class PropertyMarkupRendererImpl implements PropertyMarkupRenderer {
     Closure renderInput(DomainProperty property) {
         this.domainInputRendererRegistry.get(property).renderInput(getStandardAttributes(property), property)
     }
+
 }
