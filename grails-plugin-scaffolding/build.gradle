@@ -2,5 +2,7 @@ dependencies {
     api "org.grails:grails-core:$grailsVersion"
     api "org.grails:grails-plugin-rest:$grailsVersion"
     api "org.grails:grails-web-gsp:$grailsVersion"
+    compileOnly "org.grails:grails-cli:$grailsVersion"
+    compileOnly "org.grails:grails-generators:$grailsVersion"
     compileOnly "javax.servlet:javax.servlet-api:$servletApiVersion"
 }
