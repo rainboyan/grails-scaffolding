@@ -79,16 +79,16 @@ class ScaffoldGenerator extends AbstractGenerator {
         String indexGspFile = 'app/views/' + propertyName + '/' + 'index.gsp'
         String showGspFile = 'app/views/' + propertyName + '/' + 'show.gsp'
 
-        createFile('scaffolding/DomainClass.groovy.tpl', domainClassFile, model, overwrite)
-        createFile('scaffolding/Controller.groovy.tpl', controllerFile, model, overwrite)
-        createFile('scaffolding/Service.groovy.tpl', serviceFile, model, overwrite)
-        createFile('scaffolding/create.gsp.tpl', createGspFile, model, overwrite)
-        createFile('scaffolding/edit.gsp.tpl', editGspFile, model, overwrite)
-        createFile('scaffolding/index.gsp.tpl', indexGspFile, model, overwrite)
-        createFile('scaffolding/show.gsp.tpl', showGspFile, model, overwrite)
-        createFile('scaffolding/DomainClassSpec.groovy.tpl', domainClassSpecFile, model, overwrite)
-        createFile('scaffolding/ControllerSpec.groovy.tpl', controllerSpecFile, model, overwrite)
-        createFile('scaffolding/ServiceSpec.groovy.tpl', serviceSpecFile, model, overwrite)
+        createFile('DomainClass.groovy.tpl', domainClassFile, model, overwrite)
+        createFile('Controller.groovy.tpl', controllerFile, model, overwrite)
+        createFile('Service.groovy.tpl', serviceFile, model, overwrite)
+        createFile('create.gsp.tpl', createGspFile, model, overwrite)
+        createFile('edit.gsp.tpl', editGspFile, model, overwrite)
+        createFile('index.gsp.tpl', indexGspFile, model, overwrite)
+        createFile('show.gsp.tpl', showGspFile, model, overwrite)
+        createFile('DomainClassSpec.groovy.tpl', domainClassSpecFile, model, overwrite)
+        createFile('ControllerSpec.groovy.tpl', controllerSpecFile, model, overwrite)
+        createFile('ServiceSpec.groovy.tpl', serviceSpecFile, model, overwrite)
 
         true
     }
